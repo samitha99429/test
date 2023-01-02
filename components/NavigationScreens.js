@@ -19,13 +19,14 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
  
-import HomeScreen from '../pages/HomeScreen';
-import OrderScreen from '../pages/OrderScreen';
+import AdminHomeScreen from '../pages/AdminHomeScreen';
+import OrderScreen from '../pages/ChildRegisterScreen';
 import ProfileScreen from '../pages/ProfileScreen';
 import SettingsScreen from '../pages/SettingsScreen';
 import InventoryScreen from '../pages/InventoryScreen';
 import InventScreen from '../pages/InventScreen';
-import AboutScreen from '../pages/AboutScreen';
+import AboutScreen from '../pages/BMICalculationScreen';
+import loginScreen from './LoginScreen';
 
 
  
@@ -43,7 +44,7 @@ function HomeStack() {
         }}>
         <Stack.Screen
           name="Home"
-          component={HomeScreen}
+          component={AdminHomeScreen}
           options={{ title: 'Home Page' }}/>
         <Stack.Screen
           name="Details"
@@ -65,7 +66,10 @@ function HomeStack() {
           name="About"
           component={AboutScreen}
           options={{ title: 'About Page' }} />
-
+ <Stack.Screen
+          name="loginscreen"
+          component={loginScreen}
+          options={{ title: 'login Page' }} />
 
       </Stack.Navigator>
   );

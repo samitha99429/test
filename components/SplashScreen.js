@@ -5,8 +5,10 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 // Logo....
 import Logo from '../assets/LuanchIcon.png';
 import Name from '../assets/ml.png';
-import LoginScreen from './loginScreen';
+import LoginScreen from './LoginScreen';
 import SignUpScreen from './SignUpScreen';
+import LoginPath from './LoginPath';
+import Navigation from '../Navigation/Navigation';
 
 const BGColor = "conic-gradient(from -61.23deg at 100% 100%, rgba(17, 134, 110, 0.76) -37.5deg, rgba(36, 83, 71, 0.901714) 99.19deg, #09AB79 125.63deg, rgba(17, 134, 110, 0.76) 322.5deg, rgba(36, 83, 71, 0.901714) 459.19deg)"
 
@@ -135,20 +137,16 @@ export default function SplashScreen() {
                     }}></Animated.Image>
                      
 
-                     <Animated.Image source={Name} style={{
-                        width: 180,
-                        height: 160,
-                        top:-45,
-                        alignContent:'center',
-                        
-                       
+                    
+                     <Animated.Text style={{
+                        fontSize: 25,
+                        fontWeight: 'bold',
+                        color: 'white',
                         transform: [
                             { translateY: moveTitle.y },
-                         
-                            { scale: scaleTitle },
-
+                            { scale: scaleTitle }
                         ]
-                    }}></Animated.Image>
+                    }}>M    A   T   H   R   A</Animated.Text>
                     
                     
                  
@@ -171,7 +169,7 @@ export default function SplashScreen() {
                 ]
             }}>
 
-                <LoginScreen></LoginScreen>
+                <Navigation></Navigation>
 
             </Animated.View>
 

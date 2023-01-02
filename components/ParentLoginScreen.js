@@ -9,31 +9,24 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-
-
-
-
-const  LoginScreen=()=> {
-  
+const  ParentLoginScreen=()=> {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const WIDTH = Dimensions.get('screen').width;
     const navigation = useNavigation();
-
    
     //const { height } = Dimensions.get("window");
     const {height}=useWindowDimensions();
     const onLoginPressed =()=>{
       console.warn("sign in");
 
-      navigation.navigate('Home');
+      navigation.navigate('ParentHome');
     };
     const onForgotPasswordPressed=()=>{
       console.warn('onForgotPasswordPressed');
     };
 
     const onSignUpPressed=()=>{
-      
       console.warn('onSignUpPressed');
 
       navigation.navigate('Signup');
@@ -89,4 +82,4 @@ const styles = StyleSheet.create({
     },
 
 })
-export default LoginScreen;
+export default ParentLoginScreen;
